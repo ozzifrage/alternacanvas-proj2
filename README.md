@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+ui-proj2-alterna-canvas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo is home for all files relating to my User Interface Project 2: Alterna-Canvas. This project's goal is to rework the student's view of Canvas for a more enjoyable experience reviewing class materials, and submitting assignments.
 
-## Available Scripts
+Project Requirements As Written: You will design and implement an interactive Alterna-Canvas experience for an imaginary student.
 
-In the project directory, you can run:
+Pick a name for your student. This student is enrolled in three courses: the UI course, senior design and a computer graphics course (that doesn't currently exist, but we'll pretend). It is October 13th, and this student has completed about half of the semester, and has several assignments and activities to do within Alterna-Canvas in an upcoming imaginary week.
+We will assume that instructors will still use their normal interface for creating a syllabus, creating modules, uploading presentations, creating pages of content, creating assignments and posting grades. The student experience will be your Canvas-the game- UI.
 
-### `npm start`
+C-goals: Design a basic UI for your game-ified Alterna-canvas. At this level, the UI only needs to focus on one student, and one course.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Develop a gameification concept, and display the student's status within this game as of Oct 13th, 2023. Is your gameification concept a points or rewards system, a character on a quest through a castle, ... be creative!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In your UI, students need to be able to accomplish the following basic tasks.
 
-### `npm test`
+Students need to be able to view the syllabus Students need to be able to view all announcements- with new announcements highlighted so students will see them.
+Students need to be able to view a list of presentations and other course materials, organized by modules.
+Students need to be able to see upcoming assignments Students need to be able to see their progress in the course- use your gameification approach Your game-ification concept should be clear in this UI. You should pay attention to graphic design principles- layout, color, text presentation- in your UI.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+B-goals: Add to your C-goals the following functionalities:
 
-### `npm run build`
+Students need to be able to submit assignments. Submission needs to have text entry and document upload options you do not have to have full document upload functionality in your UI, but you should have an option for doing so that could be connected in "future work" to a working document upload feature.
+Students need to be able to access course materials- view or download presentations Students need to be able to view their grades on assignments, and their grade in the course so far, according to the instructor's grade weighting scheme. Students need to be able to plan their work- using a calendar or to-do list.
+Students need a Zoom connection option, but this feature does not need to be fully functional, leaving as "future work" connecting to Zoom.
+As students do tasks in this class, the UI should update to reflect their progress in the class, using your gameification approach. You should be able to perform a sequence of tasks for the student, and see changes in the UI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A-goals: A rich, fully featured UI for all three courses. All three courses for a mock student should be displayed, either in one page that integrates this information, or a set of sub pages/menus/regions on the screen. How will your gameification concept apply over multiple courses?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Develop several mock students to show how your UI motivates them to perform better, or celebrates their success.
+Add a simulation that runs over the semester, to highlight how your page functions and updates for an example student over a length of time. Excellent use of visual design principles, which shows thoughtful work in designing the UI.
