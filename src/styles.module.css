@@ -1,7 +1,13 @@
 /* change the background color */
 .navbarCustom{
     background-color: #cc3333;
-    color: #ffffff;
+    color: white;
+}
+
+.sidebarCustom{
+    background-color:lightgrey;
+    border-radius: 5%;
+    color:black;
 }
 
 /* change the brand and text color */

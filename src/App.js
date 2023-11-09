@@ -1,5 +1,6 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./styles.module.css"
 import CustomNavbar from './components/CustomNavbar';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -19,7 +20,12 @@ function App() {
 							<StackedExample></StackedExample>
 						
 						</Col>
-						<Col sm={10}>sm=10</Col>
+						<Col sm={10}>sm=10 
+							<Container className={styles.sidebarCustom}>
+
+							</Container>
+						
+						</Col>
 					</Row>
 				</Container>
 			</main>
