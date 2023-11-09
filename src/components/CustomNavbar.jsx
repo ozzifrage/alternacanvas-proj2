@@ -4,6 +4,8 @@ import styles from "../styles.module.css"
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
+import { Link } from "react-router-dom";
+
 function CustomNavbar() {
 	return (
 		<Navbar className={styles.navbarCustom} expand="lg">
@@ -12,9 +14,9 @@ function CustomNavbar() {
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="me-auto">
-						<Nav.Link className={styles.navbarCustom} href="/">Home</Nav.Link>
-						<Nav.Link className={styles.navbarCustom} href="/customization">Customization</Nav.Link>
-						<Nav.Link className={styles.navbarCustom} href="/account">Account</Nav.Link>
+						<Link className={styles.navbarText} to="/">Home</Link>
+						<Link className={styles.navbarText} to="/customization">Customization</Link>
+						<Link className={styles.navbarText} to="/account">Account</Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
