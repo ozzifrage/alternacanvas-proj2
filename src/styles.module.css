@@ -4,6 +4,16 @@
     color: white;
 }
 
+.contentContainer{
+
+    background-color:whitesmoke;
+    color:black;
+    border-radius:1%;
+    padding: 3%;
+
+
+}
+
 .sidebarCustom{
     background-color:lightgrey;
     border-radius: 5%;

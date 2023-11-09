@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import StackedExample from './components/StackedExample';
+import PageCard from './components/pageCard';
 
 function App() {
 	return (
@@ -21,7 +22,8 @@ function App() {
 						
 						</Col>
 						<Col sm={10}>sm=10 
-							<Container className={styles.sidebarCustom}>
+							<Container className={styles.contentContainer}>
+								<PageCard></PageCard>
 
 							</Container>
 						
