@@ -1,0 +1,23 @@
+/* change the background color */
+.navbarCustom{
+    background-color: #cc3333;
+    color: #ffffff;
+}
+
+/* change the brand and text color */
+.navbarCustom .navbarBrand,
+.navbarCustom .navbarText {
+    color: #ffffff;
+}
+
+/* change the link color */
+.navbarCustom .navbar-nav .nav-link {
+    color: #ffbb00;
+}
+
+/* change the color of active or hovered links */
+.navbarCustom .nav-item.active .nav-link,
+.navbarCustom .nav-item:focus .nav-link,
+.navbarCustom .nav-item:hover .nav-link {
+    color: pink;
+}
