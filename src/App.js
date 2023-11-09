@@ -15,11 +15,11 @@ function App() {
 			<main>
 				<Container>
 					<Row className="px-4 my-5">
-						<Col sm={7}>sm=8
+						<Col sm={2}>sm=2
 							<StackedExample></StackedExample>
 						
 						</Col>
-						<Col sm={5}>sm=4</Col>
+						<Col sm={10}>sm=10</Col>
 					</Row>
 				</Container>
 			</main>
