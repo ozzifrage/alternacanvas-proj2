@@ -12,9 +12,9 @@ function CustomNavbar() {
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="me-auto">
-						<Nav.Link className={styles.navbarCustom} href="Root">Home</Nav.Link>
-						<Nav.Link className={styles.navbarCustom} href="Customization">Customization</Nav.Link>
-						<Nav.Link className={styles.navbarCustom} href="Account">Account</Nav.Link>
+						<Nav.Link className={styles.navbarCustom} href="/">Home</Nav.Link>
+						<Nav.Link className={styles.navbarCustom} href="/customization">Customization</Nav.Link>
+						<Nav.Link className={styles.navbarCustom} href="/account">Account</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
