@@ -2,6 +2,8 @@
 .navbarCustom{
     background-color: #cc3333;
     color: white;
+    height: 100vh;
+    align-items: flex-start;
 }
 
 .navbarText{
@@ -15,7 +17,6 @@
     color:black;
     border-radius:1%;
     padding: 3%;
-
 
 }
 
