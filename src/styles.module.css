@@ -43,3 +43,7 @@
 .navbarCustom .nav-item:hover .nav-link {
     color: pink;
 }
+
+.cardContainer {
+    margin-right: 100px;
+}

@@ -7,12 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 function ClassCard({ title, color, linkTo }) {
   const cardStyle = {
-    width: '300px', // Set your desired fixed width
+    width: '350px', // Set your desired fixed width
     borderRadius: '10px', // Add rounded corners
+    marginRight: '20px'
   };
 
   const headerStyle = {
-    height: '160px', // Set your desired fixed height
+    height: '200px', // Set your desired fixed height
     backgroundColor: color,
     border: 'none',
     borderTopLeftRadius: 'inherit',
@@ -20,21 +21,18 @@ function ClassCard({ title, color, linkTo }) {
   };
 
   return (
-    <Card style={cardStyle} className="mb-3">
-      {/* First Row with Solid Color */}
-      <Card.Header style={headerStyle}>
-        {/* No text in the header */}
-      </Card.Header>
+    <Card style={cardStyle}>
 
-      {/* Second Row with Link */}
-      <Card.Body>
-        {/* Description text removed */}
-        <Link to={linkTo} className="stretched-link">
-          <div className="h-100 d-flex align-items-center justify-content-center">
-            {title}
-          </div>
-        </Link>
-      </Card.Body>
+        <Card.Header style={headerStyle}></Card.Header>
+
+        <Card.Body>
+            <Link to={linkTo} className="stretched-link">
+                <div className="h-100 d-flex align-items-center justify-content-center">
+                {title}
+                </div>
+            </Link>
+        </Card.Body>
+
     </Card>
   );
 }
