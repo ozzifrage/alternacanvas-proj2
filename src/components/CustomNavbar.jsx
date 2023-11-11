@@ -20,10 +20,8 @@ function CustomNavbar() {
 						<Link className={styles.navbarText}>Courses</Link>
 						<Link className={styles.navbarText}>Calendar</Link>
 						<Link className={styles.navbarText}>Inbox</Link>
-						<Link className={styles.navbarText}>History</Link>
 						<Link className={styles.navbarText} to="/account">Account</Link>
 						<Link className={styles.navbarText} to="/customization">Customization</Link>
-						<Link className={styles.navbarText}>Help</Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
