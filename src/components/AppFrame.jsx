@@ -13,7 +13,7 @@ function AppFrame() {
             <Routes>
                 <Route path="/" element={<SharedLayout />}>
                     <Route index element={<Dashboard />} />
-                    <Route path=":classId" element={<CoursePage />} />
+                    <Route path="classes/:classId" element={<CoursePage />} />
                     <Route path="account" element={<Account />} />
                     <Route path="customization" element={<Customization />} />
                 </Route>
