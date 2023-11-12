@@ -1,7 +1,7 @@
 import Nav from 'react-bootstrap/Nav';
 import styles from "../styles.module.css";
 
-function StackedExample() {
+function CourseBar() {
 	return (
 		<Nav defaultActiveKey="/home" variant="pills"  className={["flex-column", styles.sidebarCustom]}>
 			<Nav.Link eventKey="link-1">Announcements</Nav.Link>
@@ -14,4 +14,4 @@ function StackedExample() {
 	);
 }
 
-export default StackedExample;
+export default CourseBar;

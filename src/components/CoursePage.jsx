@@ -5,7 +5,7 @@ import CustomNavbar from './CustomNavbar';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import StackedExample from './StackedExample';
+import CourseBar from './CourseBar';
 import PageCard from './pageCard';
 
 function CoursePage() {
@@ -14,15 +14,12 @@ function CoursePage() {
 			<Container>
 				<Row className="px-4 my-5">
 					<Col sm={2}>sm=2
-						<StackedExample></StackedExample>
-					
+						<CourseBar></CourseBar>
 					</Col>
 					<Col sm={10}>sm=10 
 						<Container className={styles.contentContainer}>
 							<PageCard></PageCard>
-
 						</Container>
-					
 					</Col>
 				</Row>
 			</Container>
