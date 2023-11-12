@@ -1,15 +1,25 @@
 import Nav from 'react-bootstrap/Nav';
+import {Link} from "react-router-dom"
 import styles from "../styles.module.css";
 
 function CourseBar() {
 	return (
-		<Nav defaultActiveKey="/home" variant="pills"  className={["flex-column", styles.sidebarCustom]}>
-			<Nav.Link eventKey="link-1">Announcements</Nav.Link>
-			<Nav.Link eventKey="link-2">Modules</Nav.Link>
-			<Nav.Link eventKey="link-3">Assignments</Nav.Link>
-			<Nav.Link eventKey="link-4"> Grades</Nav.Link>
-			<Nav.Link eventKey="link-5"> Syllabus</Nav.Link>
-			<Nav.Link eventKey="link-6"> Zoom</Nav.Link>
+		<Nav defaultActiveKey="/announcements" variant="pills"  className={["flex-column", styles.sidebarCustom]}>
+			<Nav.Link>
+				<Link to="../announcements" relative="path">Announcements</Link>
+			</Nav.Link>
+			<Nav.Link>
+				<Link to="../modules" relative="path">Modules</Link>
+			</Nav.Link>
+			<Nav.Link>
+				<Link to="../grades" relative="path">Grades</Link>
+			</Nav.Link>
+			<Nav.Link>
+				<Link to="../syllabus" relative="path">Syllabus</Link>
+			</Nav.Link>
+			<Nav.Link>
+				<Link to="../zoom" relative="path">Zoom</Link>
+			</Nav.Link>
 		</Nav>
 	);
 }
