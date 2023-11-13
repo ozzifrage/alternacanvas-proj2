@@ -1,12 +1,16 @@
-// Customization.js
-import React from 'react';
+import React, { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 function Customization() {
+  const [modalShow, setModalShow] = useState(false);
+  const [remainingChests, setRemainingChests] = useState(5);
+
   const hatItems = [
     // Your hat items here
     { id: 1, name: 'Hat 1', imageUrl: 'images/hats/hat_01.png' },
@@ -78,6 +82,38 @@ function Customization() {
     prevArrow: <SamplePrevArrow />,
   };
 
+  const MyVerticallyCenteredModal = (props) => {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            New Item!
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h4>You unlocked a new hat!</h4>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  };
+
+  const handleOpenChest = () => {
+    if (remainingChests > 0) {
+      // Update the remaining chests value and perform any other actions
+      setRemainingChests((prevChests) => prevChests - 1);
+      // Add logic for what happens when a chest is opened
+      setModalShow(true);
+    }
+  };
+
   return (
     <div>
       <Row style={{ height: '100vh' }}>
@@ -126,8 +162,18 @@ function Customization() {
 
         <Col xs={12} md={4} lg={4} style={{ height: '100%', backgroundColor: '#808080', paddingTop: '80px', textAlign: 'center' }}>
           <img src="images/blank_profile_icon.png" alt="Blank Profile Icon" style={{ width: '300px', height: 'auto', margin: 'auto' }} />
-          <h1 style={{paddingBottom: '75px'}}>John Smith</h1>
-          <button style={{ width: '300px', height: '75px' }}>Open Chest! (5 Remaining)</button>
+          <h1 style={{ paddingBottom: '75px' }}>John Smith</h1>
+          <button
+            style={{ width: '300px', height: '75px' }}
+            onClick={handleOpenChest}
+            disabled={remainingChests === 0}
+          >
+            Open Chest! ({remainingChests} Remaining)
+          </button>
+          <MyVerticallyCenteredModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
         </Col>
       </Row>
     </div>
