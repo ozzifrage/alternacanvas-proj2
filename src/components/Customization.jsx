@@ -10,40 +10,39 @@ import Modal from 'react-bootstrap/Modal';
 function Customization() {
   const [modalShow, setModalShow] = useState(false);
   const [remainingChests, setRemainingChests] = useState(5);
+  const [updateSlider, setUpdateSlider] = useState(false);
+  const [lastUnlockedItem, setLastUnlockedItem] = useState(null);
 
   const hatItems = [
-    // Your hat items here
-    { id: 1, name: 'Hat 1', imageUrl: 'images/hats/hat_01.png' },
-    { id: 2, name: 'Hat 2', imageUrl: 'images/hats/hat_02.png' },
-    { id: 3, name: 'Hat 3', imageUrl: 'images/hats/hat_03.png' },
-    { id: 4, name: 'Hat 4', imageUrl: 'images/hats/hat_04.png' },
-    { id: 5, name: 'Hat 5', imageUrl: 'images/hats/hat_05.png' },
-    { id: 6, name: 'Hat 6', imageUrl: 'images/hats/hat_06.png' },
-    // Add more items as needed
+    { id: 1, name: 'Top Hat', imageUrl: 'images/hats/hat_01.png' },
+    { id: 2, name: 'Santa Hat', imageUrl: 'images/hats/hat_02.png' },
+    { id: 3, name: 'Green Hat', imageUrl: 'images/hats/hat_03.png' },
+    { id: 4, name: 'Cowboy Hat', imageUrl: 'images/hats/hat_04.png' },
+  ];
+
+  const lockedHatItems = [
+    { id: 5, name: 'Blue Cap', imageUrl: 'images/hats/hat_05.png' },
+    { id: 6, name: 'Horned Hat', imageUrl: 'images/hats/hat_06.png' },
   ];
 
   const shirtItems = [
-    // Your hat items here
-    { id: 1, name: 'Shirt 1', imageUrl: 'images/shirts/shirt_01.png' },
-    { id: 2, name: 'Shirt 2', imageUrl: 'images/shirts/shirt_02.png' },
-    { id: 3, name: 'Shirt 3', imageUrl: 'images/shirts/shirt_03.png' },
-    { id: 4, name: 'Shirt 4', imageUrl: 'images/shirts/shirt_04.png' },
-    { id: 5, name: 'Shirt 5', imageUrl: 'images/shirts/shirt_05.png' },
-    { id: 6, name: 'Shirt 6', imageUrl: 'images/shirts/shirt_06.png' },
-    { id: 7, name: 'Shirt 7', imageUrl: 'images/shirts/shirt_07.png' },
-    { id: 8, name: 'Shirt 8', imageUrl: 'images/shirts/shirt_08.png' },
-    // Add more items as needed
+    { id: 1, name: 'Red Shirt', imageUrl: 'images/shirts/shirt_01.png' },
+    { id: 3, name: 'Yellow Shirt', imageUrl: 'images/shirts/shirt_03.png' },
+    { id: 2, name: 'Green Shirt', imageUrl: 'images/shirts/shirt_02.png' },
+    { id: 4, name: 'Teal Shirt', imageUrl: 'images/shirts/shirt_04.png' },
+    { id: 5, name: 'Blue Shirt', imageUrl: 'images/shirts/shirt_05.png' },
+    { id: 6, name: 'Indigo Shirt', imageUrl: 'images/shirts/shirt_06.png' },
+    { id: 7, name: 'Purple Shirt', imageUrl: 'images/shirts/shirt_07.png' },
+    { id: 8, name: 'Pink Shirt', imageUrl: 'images/shirts/shirt_08.png' },
   ];
 
   const backgroundItems = [
-    // Your hat items here
-    { id: 1, name: 'Background 1', imageUrl: 'images/backgrounds/background_01.png' },
-    { id: 2, name: 'Background 2', imageUrl: 'images/backgrounds/background_02.png' },
-    { id: 3, name: 'Background 3', imageUrl: 'images/backgrounds/background_03.png' },
-    { id: 4, name: 'Background 4', imageUrl: 'images/backgrounds/background_04.png' },
-    { id: 5, name: 'Background 5', imageUrl: 'images/backgrounds/background_05.png' },
-    { id: 6, name: 'Background 6', imageUrl: 'images/backgrounds/background_06.png' },
-    // Add more items as needed
+    { id: 1, name: 'Night', imageUrl: 'images/backgrounds/background_01.png' },
+    { id: 2, name: 'Abstract', imageUrl: 'images/backgrounds/background_02.png' },
+    { id: 3, name: 'Flowers', imageUrl: 'images/backgrounds/background_03.png' },
+    { id: 4, name: 'Green Haze', imageUrl: 'images/backgrounds/background_04.png' },
+    { id: 5, name: 'Forest', imageUrl: 'images/backgrounds/background_05.png' },
+    { id: 6, name: 'Royal', imageUrl: 'images/backgrounds/background_06.png' },
   ];
 
   const customSliderStyle = {
@@ -96,7 +95,15 @@ function Customization() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>You unlocked a new hat!</h4>
+          <h4>You unlocked a new {lastUnlockedItem?.type}!</h4>
+          {/* Display the unlocked item image if available */}
+          {lastUnlockedItem && (
+            <img
+              src={lastUnlockedItem.imageUrl}
+              alt={lastUnlockedItem.name}
+              style={{ width: '100px', height: 'auto' }}
+            />
+          )}
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={props.onHide}>Close</Button>
@@ -107,13 +114,37 @@ function Customization() {
 
   const handleOpenChest = () => {
     if (remainingChests > 0) {
-      // Update the remaining chests value and perform any other actions
       setRemainingChests((prevChests) => prevChests - 1);
-      // Add logic for what happens when a chest is opened
+  
+      // Array containing all available items
+      const allItems = [...lockedHatItems, ...shirtItems, ...backgroundItems];
+  
+      // Select a random item from the available items
+      const randomItem = allItems[Math.floor(Math.random() * allItems.length)];
+  
+      // Determine the type of the unlocked item
+      let itemType = '';
+      if (lockedHatItems.some((item) => item.id === randomItem.id)) {
+        hatItems.push(randomItem);
+        itemType = 'hat';
+      } else if (shirtItems.some((item) => item.id === randomItem.id)) {
+        shirtItems.push(randomItem);
+        itemType = 'shirt';
+      } else if (backgroundItems.some((item) => item.id === randomItem.id)) {
+        backgroundItems.push(randomItem);
+        itemType = 'background';
+      }
+  
+      // Update the last unlocked item
+      setLastUnlockedItem({ ...randomItem, type: itemType });
+  
+      // Toggle the state variable to force a re-render of the Slider
+      setUpdateSlider((prev) => !prev);
+  
       setModalShow(true);
     }
   };
-
+  
   return (
     <div>
       <Row style={{ height: '100vh' }}>
@@ -124,7 +155,7 @@ function Customization() {
 
           <h4 style={{ textAlign: 'center' }}>Hats</h4>
           <div>
-            <Slider {...carouselSettings} style={customSliderStyle}>
+            <Slider key={updateSlider} {...carouselSettings} style={customSliderStyle}>
               {hatItems.map((hat) => (
                 <div key={hat.id}>
                   <img src={hat.imageUrl} alt={hat.name} style={{ width: '100px', height: 'auto' }} />
@@ -137,10 +168,10 @@ function Customization() {
           <h4 style={{ textAlign: 'center' }}>Shirts</h4>
           <div>
             <Slider {...carouselSettings} style={customSliderStyle}>
-              {shirtItems.map((hat) => (
-                <div key={hat.id}>
-                  <img src={hat.imageUrl} alt={hat.name} style={{ width: '100px', height: 'auto' }} />
-                  <p>{hat.name}</p>
+              {shirtItems.map((shirt) => (
+                <div key={shirt.id}>
+                  <img src={shirt.imageUrl} alt={shirt.name} style={{ width: '100px', height: 'auto' }} />
+                  <p>{shirt.name}</p>
                 </div>
               ))}
             </Slider>
@@ -149,10 +180,10 @@ function Customization() {
           <h4 style={{ textAlign: 'center' }}>Backgrounds</h4>
           <div>
             <Slider {...carouselSettings} style={customSliderStyle}>
-              {backgroundItems.map((hat) => (
-                <div key={hat.id}>
-                  <img src={hat.imageUrl} alt={hat.name} style={{ width: '100px', height: 'auto' }} />
-                  <p>{hat.name}</p>
+              {backgroundItems.map((background) => (
+                <div key={background.id}>
+                  <img src={background.imageUrl} alt={background.name} style={{ width: '100px', height: 'auto' }} />
+                  <p>{background.name}</p>
                 </div>
               ))}
             </Slider>
