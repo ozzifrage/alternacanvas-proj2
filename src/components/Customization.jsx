@@ -13,37 +13,43 @@ function Customization() {
   const [updateSlider, setUpdateSlider] = useState(false);
   const [lastUnlockedItem, setLastUnlockedItem] = useState(null);
 
-  const hatItems = [
+  const [hatItems, setHatItems] = useState([
     { id: 1, name: 'Top Hat', imageUrl: 'images/hats/hat_01.png' },
     { id: 2, name: 'Santa Hat', imageUrl: 'images/hats/hat_02.png' },
     { id: 3, name: 'Green Hat', imageUrl: 'images/hats/hat_03.png' },
     { id: 4, name: 'Cowboy Hat', imageUrl: 'images/hats/hat_04.png' },
-  ];
+  ]);
 
-  const lockedHatItems = [
+  const [lockedHatItems, setLockedHatItems] = useState([
     { id: 5, name: 'Blue Cap', imageUrl: 'images/hats/hat_05.png' },
     { id: 6, name: 'Horned Hat', imageUrl: 'images/hats/hat_06.png' },
-  ];
+  ]);
 
-  const shirtItems = [
+  const [shirtItems, setShirtItems] = useState([
     { id: 1, name: 'Red Shirt', imageUrl: 'images/shirts/shirt_01.png' },
     { id: 3, name: 'Yellow Shirt', imageUrl: 'images/shirts/shirt_03.png' },
     { id: 2, name: 'Green Shirt', imageUrl: 'images/shirts/shirt_02.png' },
     { id: 4, name: 'Teal Shirt', imageUrl: 'images/shirts/shirt_04.png' },
+  ]);
+
+  const [lockedShirtItems, setLockedShirtItems] = useState([
     { id: 5, name: 'Blue Shirt', imageUrl: 'images/shirts/shirt_05.png' },
     { id: 6, name: 'Indigo Shirt', imageUrl: 'images/shirts/shirt_06.png' },
     { id: 7, name: 'Purple Shirt', imageUrl: 'images/shirts/shirt_07.png' },
     { id: 8, name: 'Pink Shirt', imageUrl: 'images/shirts/shirt_08.png' },
-  ];
+  ]);
 
-  const backgroundItems = [
+  const [backgroundItems, setBackgroundItems] = useState([
     { id: 1, name: 'Night', imageUrl: 'images/backgrounds/background_01.png' },
     { id: 2, name: 'Abstract', imageUrl: 'images/backgrounds/background_02.png' },
     { id: 3, name: 'Flowers', imageUrl: 'images/backgrounds/background_03.png' },
     { id: 4, name: 'Green Haze', imageUrl: 'images/backgrounds/background_04.png' },
+  ]);
+
+  const [lockedBackgroundItems, setLockedBackgroundItems] = useState([
     { id: 5, name: 'Forest', imageUrl: 'images/backgrounds/background_05.png' },
     { id: 6, name: 'Royal', imageUrl: 'images/backgrounds/background_06.png' },
-  ];
+  ]);
 
   const customSliderStyle = {
     margin: 'auto',
@@ -116,32 +122,47 @@ function Customization() {
     if (remainingChests > 0) {
       setRemainingChests((prevChests) => prevChests - 1);
   
-      // Array containing all available items
-      const allItems = [...lockedHatItems, ...shirtItems, ...backgroundItems];
-  
-      // Select a random item from the available items
-      const randomItem = allItems[Math.floor(Math.random() * allItems.length)];
-  
-      // Determine the type of the unlocked item
-      let itemType = '';
-      if (lockedHatItems.some((item) => item.id === randomItem.id)) {
-        hatItems.push(randomItem);
-        itemType = 'hat';
-      } else if (shirtItems.some((item) => item.id === randomItem.id)) {
-        shirtItems.push(randomItem);
-        itemType = 'shirt';
-      } else if (backgroundItems.some((item) => item.id === randomItem.id)) {
-        backgroundItems.push(randomItem);
-        itemType = 'background';
+      const lockedLists = [lockedHatItems, lockedShirtItems, lockedBackgroundItems];
+
+      // Check if all locked item lists are empty
+      if (lockedHatItems.length === 0 && lockedShirtItems.length === 0 && lockedBackgroundItems.length === 0) {
+        return;
       }
-  
-      // Update the last unlocked item
-      setLastUnlockedItem({ ...randomItem, type: itemType });
-  
-      // Toggle the state variable to force a re-render of the Slider
-      setUpdateSlider((prev) => !prev);
-  
-      setModalShow(true);
+
+      else {
+        // Loop, choose random type and check if that list is empty. If so, choose again
+        let listToUse = lockedLists[Math.floor(Math.random() * lockedLists.length)];
+        while (listToUse.length === 0) {
+          listToUse = lockedLists[Math.floor(Math.random() * lockedLists.length)];
+        }
+        
+        // Rand select from this list and unlock that item
+        const randomItem = listToUse[Math.floor(Math.random() * listToUse.length)];
+
+        let itemType = '';
+
+        if (listToUse === lockedHatItems) {
+          itemType = 'hat';
+          setHatItems((prevItems) => [...prevItems, randomItem]);
+          setLockedHatItems((prevItems) => prevItems.filter(item => item.id !== randomItem.id));
+        } else if (listToUse === lockedShirtItems) {
+          itemType = 'shirt';
+          setShirtItems((prevItems) => [...prevItems, randomItem]);
+          setLockedShirtItems((prevItems) => prevItems.filter(item => item.id !== randomItem.id));
+        } else {
+          itemType = 'background';
+          setBackgroundItems((prevItems) => [...prevItems, randomItem]);
+          setLockedBackgroundItems((prevItems) => prevItems.filter(item => item.id !== randomItem.id));
+        } 
+
+        // Update the last unlocked item
+        setLastUnlockedItem({ ...randomItem, type: itemType });
+    
+        // Toggle the state variable to force a re-render of the Slider
+        setUpdateSlider((prev) => !prev);
+    
+        setModalShow(true);
+      }
     }
   };
   
