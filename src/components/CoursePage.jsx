@@ -9,7 +9,9 @@ import PageCard from './pageCard';
 import announcementData from "../data/announcements.json"
 import assignmentData from "../data/assignments.json"
 import moduleData from "../data/modules-metadata.json"
-import {Link, useParams} from "react-router-dom";
+import syllabusData from "../data/syllabus.json"
+import zoomData from "../data/zoom.json"
+import {useParams} from "react-router-dom";
 
 function CoursePage() {
 
@@ -26,6 +28,10 @@ function CoursePage() {
 		case "modules":
 			data = moduleData;
 			break;
+		case "syllabus":
+			data = syllabusData;
+		case "zoom":
+			data = zoomData;
 	}
 
 	return (

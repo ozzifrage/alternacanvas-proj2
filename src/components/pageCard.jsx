@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 
-function PageCard() {
+function PageCard({header, subheader, body}) {
   return (
     <Card>
       <Card.Body>

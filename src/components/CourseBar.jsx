@@ -12,6 +12,9 @@ function CourseBar() {
 				<Link to="../modules" relative="path">Modules</Link>
 			</Nav.Link>
 			<Nav.Link>
+				<Link to="../assignments" relative="path">Assignments</Link>
+			</Nav.Link>
+			<Nav.Link>
 				<Link to="../grades" relative="path">Grades</Link>
 			</Nav.Link>
 			<Nav.Link>
