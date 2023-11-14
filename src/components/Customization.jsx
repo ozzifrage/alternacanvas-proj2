@@ -70,8 +70,6 @@ function Customization() {
     width: '500px',
   };
 
-  // Import your arrow images
-
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -80,9 +78,9 @@ function Customization() {
         style={{
           ...style,
           display: 'block',
-          color: '#888888', // Set the color to #888888
-          fontSize: '44px', // Adjust the font size if needed
-          marginRight: '55px', // Adjust margin if needed
+          color: '#888888',
+          fontSize: '44px',
+          marginRight: '55px',
           cursor: 'pointer',
         }}
         onClick={onClick}
@@ -98,9 +96,9 @@ function Customization() {
         style={{
           ...style,
           display: 'block',
-          color: '#888888', // Set the color to #888888
-          fontSize: '44px', // Adjust the font size if needed
-          marginLeft: '-60px', // Adjust margin if needed
+          color: '#888888',
+          fontSize: '44px',
+          marginLeft: '-60px',
           cursor: 'pointer',
         }}
         onClick={onClick}
@@ -109,7 +107,7 @@ function Customization() {
   }
   
   useEffect(() => {
-    // Set default selections when the component mounts
+    // Set default selections when the page loads
     if (hatItems.length > 0) {
       setSelectedHat(hatItems[0]);
     }
@@ -266,9 +264,9 @@ function Customization() {
                 <div
                   style={{
                     position: 'absolute',
-                    left: '40%', // Center horizontally within the relative container
+                    left: '40%',
                     transform: 'translateX(-50%)',
-                    top: '-20%', // Center vertically
+                    top: '-20%',
                     transform: 'translateY(-50%)',
                   }}
                 >
@@ -298,9 +296,9 @@ function Customization() {
               <div
                 style={{
                   position: 'absolute',
-                  left: '40%', // Center horizontally within the relative container
+                  left: '40%',
                   transform: 'translateX(-50%)',
-                  top: '-20%', // Center vertically
+                  top: '-20%',
                   transform: 'translateY(-50%)',
                 }}
               >
@@ -330,9 +328,9 @@ function Customization() {
               <div
                 style={{
                   position: 'absolute',
-                  left: '40%', // Center horizontally within the relative container
+                  left: '40%',
                   transform: 'translateX(-50%)',
-                  top: '-20%', // Center vertically
+                  top: '-20%', 
                   transform: 'translateY(-50%)',
                 }}
               >
@@ -376,7 +374,7 @@ function Customization() {
             style={{
               position: 'absolute',
               top: 0,
-              left: 100, // Adjust the left position as needed
+              left: 100,
               width: '300px',
               height: 'auto',
               margin: 'auto',
