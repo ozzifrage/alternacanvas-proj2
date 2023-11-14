@@ -12,21 +12,19 @@ import moduleData from "../data/modules-metadata.json"
 import syllabusData from "../data/syllabus.json"
 import zoomData from "../data/zoom.json"
 import {useParams} from "react-router-dom";
+import AssignmentCard from './AssignmentCard';
 
 function CoursePage() {
 
 	const pageArgument = useParams();
 
-	if (pageArgument.pageName != "syllabus") 
+	if (pageArgument.pageName != "syllabus" && pageArgument.pageName != "assignments") 
 	{
 		let data = null;
 		switch (pageArgument.pageName) 
 		{
 			case "announcements":
 				data = announcementData;
-				break;
-			case "assignments":
-				data = assignmentData;
 				break;
 			case "modules":
 				data = moduleData;
@@ -55,7 +53,27 @@ function CoursePage() {
 				</Container>
 			</div>
 		);
-	} else 
+	} else if (pageArgument.pageName === "assignments")
+	{
+		let data = assignmentData;
+		return (
+			<div className="CoursePage">
+				<Container>
+					<Row className="px-4 my-5">
+						<Col sm={2}>sm=2
+							<CourseBar></CourseBar>
+						</Col>
+						<Col sm={10}>sm=10
+							<Container className={styles.contentContainer}>
+								{data.map((entry) => <AssignmentCard header={entry.header} subheader={entry.date} body={entry.body} subtype={entry.type}></AssignmentCard>)}
+							</Container>
+						</Col>
+					</Row>
+				</Container>
+			</div>
+		);
+
+	} else
 	{
 		return (
 			<div className="CoursePage">
