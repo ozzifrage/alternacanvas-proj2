@@ -1,13 +1,25 @@
 [
 	{
+		"header": "Upcoming Reading",
+		"date": "08/13/2022",
+		"body": "I recommend the following reading for next lecture: Design of Everyday Things chapter 4."
+	},
+	
+	{
 		"header": "Project Clarification",
-		"date": "08/15/2022",
+		"date": "08/11/2022",
 		"body": "Consulting with demons is not allowed while coding your projects. That's plagiarism."
 	},
 
 	{
-		"header": "Out for Conference",
-		"date": "08/25/2022",
-		"body": "Going to a work conference, class is async online today."
+		"header": "New Assignment Link",
+		"date": "08/10/2022",
+		"body": "The link in modules isn't working for some students, try this one: https://www.bit.ly/lknonb"
+	},
+
+	{
+		"header": "React Update",
+		"date": "08/08/2022",
+		"body": "There's a new major React version released, check it out here: https://www.github.com/react-v5"
 	}
 ]

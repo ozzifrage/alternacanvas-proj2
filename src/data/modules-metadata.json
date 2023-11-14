@@ -5,10 +5,10 @@
 		"type": "syllabus",
 		"grading": "participation",
 		"points": "0",
-		"start_or_posted": "08/15/2022",
+		"date": "08/15/2022",
 		"end_or_due": "12/09/2022",
 		"module": "none",
-		"title": "Syllabus",
+		"header": "Syllabus",
 		"reference": "na"
 	},
 	{
@@ -17,10 +17,10 @@
 		"type": "module",
 		"grading": "na",
 		"points": "na",
-		"start_or_posted": "08/22/2022",
+		"date": "08/22/2022",
 		"end_or_due": "08/26/2022",
 		"module": "module1",
-		"title": "Introduction to Usability",
+		"header": "Module 1: Introduction to Usability",
 		"reference": "na"
 	},
 	{
@@ -29,10 +29,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "08/22/2022",
+		"date": "08/22/2022",
 		"end_or_due": "08/22/2022",
 		"module": "module1",
-		"title": "Monday lecture: Intro",
+		"header": "Monday lecture: Intro",
 		"reference": "na"
 	},
 	{
@@ -41,10 +41,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "08/24/2022",
+		"date": "08/24/2022",
 		"end_or_due": "08/24/2022",
 		"module": "module1",
-		"title": "Wednesday lecture: Usability",
+		"header": "Wednesday lecture: Usability",
 		"reference": "na"
 	},
 	{
@@ -53,10 +53,10 @@
 		"type": "lecture",
 		"grading": "partitipation",
 		"points": "1",
-		"start_or_posted": "08/26/2022",
+		"date": "08/26/2022",
 		"end_or_due": "08/26/2022",
 		"module": "module1",
-		"title": "Friday lecture: Norman Principals",
+		"header": "Friday lecture: Norman Principals",
 		"reference": "na"
 	},
 	{
@@ -65,10 +65,10 @@
 		"type": "assignment",
 		"grading": "assignment",
 		"points": "10",
-		"start_or_posted": "08/15/2022",
+		"date": "08/15/2022",
 		"end_or_due": "08/29/2022",
 		"module": "module1",
-		"title": "Getting to know you",
+		"header": "Getting to know you",
 		"reference": "na"
 	},
 	{
@@ -77,10 +77,10 @@
 		"type": "module",
 		"grading": "na",
 		"points": "na",
-		"start_or_posted": "08/29/2022",
+		"date": "08/29/2022",
 		"end_or_due": "09/02/2022",
 		"module": "module2",
-		"title": "Human Centered Design",
+		"header": "Module 2: Human Centered Design",
 		"reference": "na"
 	},
 	{
@@ -89,10 +89,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "08/29/1931",
+		"date": "08/29/1931",
 		"end_or_due": "08/29/1931",
 		"module": "module2",
-		"title": "Monday lecture: Human Centered Design 1",
+		"header": "Monday lecture: Human Centered Design 1",
 		"reference": "na"
 	},
 	{
@@ -101,10 +101,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "08/31/2022",
+		"date": "08/31/2022",
 		"end_or_due": "08/31/2022",
 		"module": "module2",
-		"title": "Wednesday lecture: Human Centered Design 2",
+		"header": "Wednesday lecture: Human Centered Design 2",
 		"reference": "na"
 	},
 	{
@@ -113,10 +113,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/02/2022",
+		"date": "09/02/2022",
 		"end_or_due": "09/02/2022",
 		"module": "module2",
-		"title": "Friday lecture: Human Centered Design 3",
+		"header": "Friday lecture: Human Centered Design 3",
 		"reference": "na"
 	},
 	{
@@ -125,10 +125,10 @@
 		"type": "module",
 		"grading": "na",
 		"points": "",
-		"start_or_posted": "09/07/2022",
+		"date": "09/07/2022",
 		"end_or_due": "09/07/2022",
 		"module": "module3",
-		"title": "Sketching part 1",
+		"header": "Module 3: Sketching part 1",
 		"reference": "na"
 	},
 	{
@@ -137,10 +137,10 @@
 		"type": "na",
 		"grading": "na",
 		"points": "na",
-		"start_or_posted": "09/07/2022",
+		"date": "09/07/2022",
 		"end_or_due": "10/16/2022",
 		"module": "na",
-		"title": "Smart Object",
+		"header": "Smart Object",
 		"reference": "na"
 	},
 	{
@@ -149,10 +149,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/07/2022",
+		"date": "09/07/2022",
 		"end_or_due": "09/07/2022",
 		"module": "module3",
-		"title": "Sketching for Brainstorming",
+		"header": "Sketching for Brainstorming",
 		"reference": "na"
 	},
 	{
@@ -161,10 +161,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/07/2022",
+		"date": "09/07/2022",
 		"end_or_due": "09/07/2022",
 		"module": "module3",
-		"title": "Sketching practice 1",
+		"header": "Sketching practice 1",
 		"reference": "na"
 	},
 	{
@@ -173,10 +173,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/07/2022",
+		"date": "09/07/2022",
 		"end_or_due": "09/07/2022",
 		"module": "module3",
-		"title": "Sketching practice 2",
+		"header": "Sketching practice 2",
 		"reference": "na"
 	},
 	{
@@ -185,10 +185,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/07/2022",
+		"date": "09/07/2022",
 		"end_or_due": "09/07/2022",
 		"module": "module3",
-		"title": "Sketching practice 3",
+		"header": "Sketching practice 3",
 		"reference": "na"
 	},
 	{
@@ -197,10 +197,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/09/2022",
+		"date": "09/09/2022",
 		"end_or_due": "09/09/2022",
 		"module": "module3",
-		"title": "Sketching the Interface",
+		"header": "Sketching the Interface",
 		"reference": "na"
 	},
 	{
@@ -209,10 +209,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/09/2022",
+		"date": "09/09/2022",
 		"end_or_due": "09/09/2022",
 		"module": "module3",
-		"title": "Sketching the interface practice",
+		"header": "Sketching the interface practice",
 		"reference": "na"
 	},
 	{
@@ -221,10 +221,10 @@
 		"type": "assignment",
 		"grading": "assignment",
 		"points": "10",
-		"start_or_posted": "09/07/2022",
+		"date": "09/07/2022",
 		"end_or_due": "09/16/2022",
 		"module": "module3",
-		"title": "Sketching practice",
+		"header": "Sketching practice",
 		"reference": "inclass_01.html,inclass_02.html,inclass_03.html,inclass_04.html"
 	},
 	{
@@ -233,10 +233,10 @@
 		"type": "assignment",
 		"grading": "assignment",
 		"points": "10",
-		"start_or_posted": "09/09/2022",
+		"date": "09/09/2022",
 		"end_or_due": "09/26/2022",
 		"module": "module3",
-		"title": "Project 1 check in",
+		"header": "Project 1 check in",
 		"reference": "project1.html"
 	},
 	{
@@ -245,10 +245,10 @@
 		"type": "module",
 		"grading": "na",
 		"points": "na",
-		"start_or_posted": "09/12/2022",
+		"date": "09/12/2022",
 		"end_or_due": "09/16/2022",
 		"module": "module4",
-		"title": "Html and CSS",
+		"header": "Module 4: Html and CSS",
 		"reference": ""
 	},
 	{
@@ -257,10 +257,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/12/2022",
+		"date": "09/12/2022",
 		"end_or_due": "09/12/2022",
 		"module": "module4",
-		"title": "The Web",
+		"header": "The Web",
 		"reference": ""
 	},
 	{
@@ -269,10 +269,10 @@
 		"type": "tutorial",
 		"grading": "partitipation",
 		"points": "1",
-		"start_or_posted": "09/12/2022",
+		"date": "09/12/2022",
 		"end_or_due": "09/12/2022",
 		"module": "module4",
-		"title": "The Web tutorial",
+		"header": "The Web tutorial",
 		"reference": ""
 	},
 	{
@@ -281,10 +281,10 @@
 		"type": "tutorial",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/12/2022",
+		"date": "09/12/2022",
 		"end_or_due": "09/12/2022",
 		"module": "module4",
-		"title": "HTML tutorial",
+		"header": "HTML tutorial",
 		"reference": ""
 	},
 	{
@@ -293,10 +293,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/12/2022",
+		"date": "09/12/2022",
 		"end_or_due": "09/12/2022",
 		"module": "module4",
-		"title": "HTML practice",
+		"header": "HTML practice",
 		"reference": ""
 	},
 	{
@@ -305,10 +305,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/14/2022",
+		"date": "09/14/2022",
 		"end_or_due": "09/14/2022",
 		"module": "module4",
-		"title": "HTML",
+		"header": "HTML",
 		"reference": ""
 	},
 	{
@@ -317,10 +317,10 @@
 		"type": "tutorial",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/14/2022",
+		"date": "09/14/2022",
 		"end_or_due": "09/14/2022",
 		"module": "module4",
-		"title": "CSS tutorial",
+		"header": "CSS tutorial",
 		"reference": ""
 	},
 	{
@@ -329,10 +329,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/14/2022",
+		"date": "09/14/2022",
 		"end_or_due": "09/14/2022",
 		"module": "module4",
-		"title": "HTML practice",
+		"header": "HTML practice",
 		"reference": ""
 	},
 	{
@@ -341,10 +341,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/16/2022",
+		"date": "09/16/2022",
 		"end_or_due": "09/16/2022",
 		"module": "module4",
-		"title": "CSS",
+		"header": "CSS",
 		"reference": ""
 	},
 	{
@@ -353,10 +353,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/16/2022",
+		"date": "09/16/2022",
 		"end_or_due": "09/16/2022",
 		"module": "module4",
-		"title": "HTML practice",
+		"header": "HTML practice",
 		"reference": ""
 	},
 	{
@@ -365,10 +365,10 @@
 		"type": "assignment",
 		"grading": "assignment",
 		"points": "10",
-		"start_or_posted": "09/16/2022",
+		"date": "09/16/2022",
 		"end_or_due": "09/23/2022",
 		"module": "module4",
-		"title": "Html and CSS practice",
+		"header": "Html and CSS practice",
 		"reference": "inclass_05.html,inclass_06.html,inclass_07.html"
 	},
 	{
@@ -377,10 +377,10 @@
 		"type": "module",
 		"grading": "na",
 		"points": "",
-		"start_or_posted": "09/19/2022",
+		"date": "09/19/2022",
 		"end_or_due": "09/23/2022",
 		"module": "module5",
-		"title": "Javascript",
+		"header": "Module 5: Javascript",
 		"reference": ""
 	},
 	{
@@ -389,10 +389,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/19/2022",
+		"date": "09/19/2022",
 		"end_or_due": "09/19/2022",
 		"module": "module5",
-		"title": "Javascript",
+		"header": "Javascript",
 		"reference": ""
 	},
 	{
@@ -401,10 +401,10 @@
 		"type": "tutorial",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/19/2022",
+		"date": "09/19/2022",
 		"end_or_due": "09/19/2022",
 		"module": "module5",
-		"title": "Web server",
+		"header": "Web server",
 		"reference": ""
 	},
 	{
@@ -413,10 +413,10 @@
 		"type": "tutorial",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/19/2022",
+		"date": "09/19/2022",
 		"end_or_due": "09/19/2022",
 		"module": "module5",
-		"title": "Javascript part 1",
+		"header": "Javascript part 1",
 		"reference": ""
 	},
 	{
@@ -425,10 +425,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/19/2022",
+		"date": "09/19/2022",
 		"end_or_due": "09/19/2022",
 		"module": "module5",
-		"title": "Javascript practice",
+		"header": "Javascript practice",
 		"reference": ""
 	},
 	{
@@ -437,10 +437,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/21/2022",
+		"date": "09/21/2022",
 		"end_or_due": "09/21/2022",
 		"module": "module5",
-		"title": "Javascript part 2",
+		"header": "Javascript part 2",
 		"reference": ""
 	},
 	{
@@ -449,10 +449,10 @@
 		"type": "tutorial",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/21/2022",
+		"date": "09/21/2022",
 		"end_or_due": "09/21/2022",
 		"module": "module5",
-		"title": "Javacript part 2",
+		"header": "Javacript part 2",
 		"reference": ""
 	},
 	{
@@ -461,10 +461,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/21/2022",
+		"date": "09/21/2022",
 		"end_or_due": "09/21/2022",
 		"module": "module5",
-		"title": "Javascript practice 2",
+		"header": "Javascript practice 2",
 		"reference": ""
 	},
 	{
@@ -473,10 +473,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/23/2022",
+		"date": "09/23/2022",
 		"end_or_due": "09/23/2022",
 		"module": "module5",
-		"title": "Javascript",
+		"header": "Javascript",
 		"reference": ""
 	},
 	{
@@ -485,10 +485,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/23/2022",
+		"date": "09/23/2022",
 		"end_or_due": "09/23/2022",
 		"module": "module5",
-		"title": "Javascript practice 3",
+		"header": "Javascript practice 3",
 		"reference": ""
 	},
 	{
@@ -497,10 +497,10 @@
 		"type": "assignment",
 		"grading": "assignment",
 		"points": "10",
-		"start_or_posted": "09/23/2022",
+		"date": "09/23/2022",
 		"end_or_due": "09/30/2022",
 		"module": "module5",
-		"title": "Javascript practice",
+		"header": "Javascript practice",
 		"reference": "inclass_08.html,inclass_09.html,inclass_10.html"
 	},
 	{
@@ -509,10 +509,10 @@
 		"type": "assignment",
 		"grading": "assignment",
 		"points": "10",
-		"start_or_posted": "09/19/2022",
+		"date": "09/19/2022",
 		"end_or_due": "09/23/2022",
 		"module": "na",
-		"title": "Which smart object project 1",
+		"header": "Which smart object project 1",
 		"reference": ""
 	},
 	{
@@ -521,10 +521,10 @@
 		"type": "module",
 		"grading": "na",
 		"points": "",
-		"start_or_posted": "09/26/2022",
+		"date": "09/26/2022",
 		"end_or_due": "09/30/2022",
 		"module": "module6",
-		"title": "Design Principles",
+		"header": "Module 6: Design Principles",
 		"reference": ""
 	},
 	{
@@ -533,10 +533,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/26/2022",
+		"date": "09/26/2022",
 		"end_or_due": "09/26/2022",
 		"module": "module6",
-		"title": "Design 1",
+		"header": "Design 1",
 		"reference": ""
 	},
 	{
@@ -545,10 +545,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/26/2022",
+		"date": "09/26/2022",
 		"end_or_due": "09/26/2022",
 		"module": "module5",
-		"title": "Simplicity",
+		"header": "Simplicity",
 		"reference": ""
 	},
 	{
@@ -557,10 +557,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/28/2022",
+		"date": "09/28/2022",
 		"end_or_due": "09/28/2022",
 		"module": "module6",
-		"title": "Design 2",
+		"header": "Design 2",
 		"reference": ""
 	},
 	{
@@ -569,10 +569,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/28/2022",
+		"date": "09/28/2022",
 		"end_or_due": "09/28/2022",
 		"module": "module5",
-		"title": "Layout",
+		"header": "Layout",
 		"reference": ""
 	},
 	{
@@ -581,10 +581,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/30/2022",
+		"date": "09/30/2022",
 		"end_or_due": "09/30/2022",
 		"module": "module6",
-		"title": "Design 3",
+		"header": "Design 3",
 		"reference": ""
 	},
 	{
@@ -593,10 +593,10 @@
 		"type": "inclass",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "09/30/2022",
+		"date": "09/30/2022",
 		"end_or_due": "09/30/2022",
 		"module": "module5",
-		"title": "Color",
+		"header": "Color",
 		"reference": ""
 	},
 	{
@@ -605,10 +605,10 @@
 		"type": "module",
 		"grading": "na",
 		"points": "",
-		"start_or_posted": "10/03/2022",
+		"date": "10/03/2022",
 		"end_or_due": "10/14/2022",
 		"module": "module7",
-		"title": "People",
+		"header": "Module 7: People",
 		"reference": ""
 	},
 	{
@@ -617,10 +617,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "10/03/2022",
+		"date": "10/03/2022",
 		"end_or_due": "10/03/2022",
 		"module": "module7",
-		"title": "People 1",
+		"header": "People 1",
 		"reference": ""
 	},
 	{
@@ -629,10 +629,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "10/05/2022",
+		"date": "10/05/2022",
 		"end_or_due": "10/05/2022",
 		"module": "module7",
-		"title": "People 2",
+		"header": "People 2",
 		"reference": ""
 	},
 	{
@@ -641,10 +641,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "10/12/2022",
+		"date": "10/12/2022",
 		"end_or_due": "10/12/2022",
 		"module": "module7",
-		"title": "People 3",
+		"header": "People 3",
 		"reference": ""
 	},
 	{
@@ -653,10 +653,10 @@
 		"type": "lecture",
 		"grading": "participation",
 		"points": "1",
-		"start_or_posted": "10/14/2022",
+		"date": "10/14/2022",
 		"end_or_due": "10/14/2022",
 		"module": "module7",
-		"title": "People 4",
+		"header": "People 4",
 		"reference": ""
 	},
 	{
@@ -665,10 +665,10 @@
 		"type": "project",
 		"grading": "project",
 		"points": "50",
-		"start_or_posted": "09/07/2022",
+		"date": "09/07/2022",
 		"end_or_due": "10/14/2022",
 		"module": "na",
-		"title": "Project 1 implementation",
+		"header": "Project 1 implementation",
 		"reference": "project1.html,assignment_03.html"
 	},
 	{
@@ -677,10 +677,10 @@
 		"type": "project",
 		"grading": "project",
 		"points": "40",
-		"start_or_posted": "09/07/2022",
+		"date": "09/07/2022",
 		"end_or_due": "10/16/2022",
 		"module": "na",
-		"title": "Project 1 documentation",
+		"header": "Project 1 documentation",
 		"reference": "project1.html,assignment_03.html,07.html"
 	}
 ]

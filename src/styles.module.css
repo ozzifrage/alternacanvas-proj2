@@ -26,6 +26,10 @@
     color:black;
 }
 
+.sidebarLink{
+    color:rgb(217, 27, 27)
+}
+
 /* change the brand and text color */
 .navbarCustom .navbarBrand,
 .navbarCustom .navbarText {

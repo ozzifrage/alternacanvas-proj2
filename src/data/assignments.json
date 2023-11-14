@@ -1,0 +1,19 @@
+[
+	{
+		"header": "Pick Smart Object",
+		"date": "10/15/2022",
+		"body": "Which smart object for project 1 \n\r Tell me which smart object you are going to work on.\n\r Smart shower \n\r Smart shopping cart \n\r Smart water bottle \n\rSmart toilet \n\rSmart flower pot / garden"
+	},
+
+	{
+		"header": "Project 1 implementation submission",
+		"date": "10/25/2022",
+		"body": "A link to your github repository where your code is hosted \n\rA compressed zip drive containing everything I need to run your code under local host \n\rNote- if your code is designed to run within your existing page- please make note of this in the submission, and I will test it there."
+	},
+
+	{
+		"header": "Project 1 documentation",
+		"date": "10/30/2022",
+		"body": "A link to your documentation and design sketches.\n\rThese should be presented on your publicly accessible portfolio page.\n\rThe description for the documentation requirements are available at the project 1 page."
+	}
+]

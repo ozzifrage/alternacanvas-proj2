@@ -1,0 +1,26 @@
+[
+    {
+        "header": "User Interface Design",
+        "subtitle":"Class times: Mon, Wed, Fri 1:25pm-2:20pm",
+        "body":"Location: Baldwin 661, Instructor: Dr. Jillian Aurisano"
+    },
+    {
+        "header": "What is this course about?",
+        "subtitle": "",
+        "body": "In this class we are going to explore user interface design- a computer science discipline that considers how to make computers and computational systems useful to people.&nbsp;&nbsp;</p><p>We will be doing lots of:</p><ul><li>sketching - to learn how to think visually,</li> <li>prototyping- to learn how to evaluate a design before implementing it,</li> <li>programming- creating real user interfaces</li> \n\r <li>critiquing- to learn how to discuss the tradeoffs of different approaches</li>"
+    },
+    {
+        "header": "Prerequisites",
+        "subtitle": "",
+        "body": "<li>CS2028 Data Structures, EECE3093C.&nbsp;&nbsp;</li><li>Programming experience in C++, Java, Python, Javascript or another language</li>"
+    },
+    {
+        "header": "Materials",
+        "subtitle": "For this class, you will need:",
+        "body": "<li><span>A computer for completing assignments</span></li><li><span>A sketchbook with pencils or a tablet for sketching</span></li>"
+    }
+
+
+
+
+]
