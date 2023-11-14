@@ -7,10 +7,10 @@ function SharedLayout() {
 	return (
         <>
             <Row>
-                <Col sm={1}>
+                <Col sm={2}>
                     <CustomNavbar />
                 </Col>
-                <Col sm={11}>
+                <Col sm={10}>
                     <Outlet />
                 </Col>
             </Row>
