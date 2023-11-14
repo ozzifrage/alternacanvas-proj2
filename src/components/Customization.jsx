@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Slider from 'react-slick';
@@ -12,6 +12,9 @@ function Customization() {
   const [remainingChests, setRemainingChests] = useState(5);
   const [updateSlider, setUpdateSlider] = useState(false);
   const [lastUnlockedItem, setLastUnlockedItem] = useState(null);
+  const [selectedHat, setSelectedHat] = useState(null);
+  const [selectedShirt, setSelectedShirt] = useState(null);
+  const [selectedBackground, setSelectedBackground] = useState(null);
 
   const [hatItems, setHatItems] = useState([
     { id: 1, name: 'Top Hat', imageUrl: 'images/hats/hat_01.png' },
@@ -51,6 +54,7 @@ function Customization() {
     { id: 6, name: 'Royal', imageUrl: 'images/backgrounds/background_06.png' },
   ]);
 
+
   const customSliderStyle = {
     margin: 'auto',
     width: '500px',
@@ -85,7 +89,16 @@ function Customization() {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    afterChange: (currentSlide, nextSlide) => {
+      // Update selected items based on the current center item
+      if (hatItems.length > 0) setSelectedHat(hatItems[currentSlide]);
+      if (shirtItems.length > 0) setSelectedShirt(shirtItems[currentSlide]);
+      if (backgroundItems.length > 0) setSelectedBackground(backgroundItems[currentSlide]);
+    },
+    centerMode: true,
+    centerPadding: '0',
   };
+  
 
   const MyVerticallyCenteredModal = (props) => {
     return (
@@ -102,7 +115,6 @@ function Customization() {
         </Modal.Header>
         <Modal.Body>
           <h4>You unlocked a new {lastUnlockedItem?.type}!</h4>
-          {/* Display the unlocked item image if available */}
           {lastUnlockedItem && (
             <img
               src={lastUnlockedItem.imageUrl}
@@ -126,6 +138,7 @@ function Customization() {
 
       // Check if all locked item lists are empty
       if (lockedHatItems.length === 0 && lockedShirtItems.length === 0 && lockedBackgroundItems.length === 0) {
+        console.warn("No locked items available to unlock!");
         return;
       }
 
@@ -157,9 +170,6 @@ function Customization() {
 
         // Update the last unlocked item
         setLastUnlockedItem({ ...randomItem, type: itemType });
-    
-        // Toggle the state variable to force a re-render of the Slider
-        setUpdateSlider((prev) => !prev);
     
         setModalShow(true);
       }
@@ -213,10 +223,53 @@ function Customization() {
         </Col>
 
         <Col xs={12} md={4} lg={4} style={{ height: '100%', backgroundColor: '#808080', paddingTop: '80px', textAlign: 'center' }}>
-          <img src="images/blank_profile_icon.png" alt="Blank Profile Icon" style={{ width: '300px', height: 'auto', margin: 'auto' }} />
+        <div style={{ position: 'relative' }}>
+
+          {/* Display the selected background */}
+          {selectedBackground && (
+            <img
+              id="profile-pic-background"
+              src={selectedBackground.imageUrl}
+              alt={selectedBackground.name}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 100,
+                width: '300px',
+                height: '300px',
+                opacity: 1,
+              }}
+            />
+          )}
+
+          {/* Display the profile picture */}
+          <img
+            id="profile-pic"
+            src="images/blank_profile_icon.png"
+            alt="Blank Profile Icon"
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 100, // Adjust the left position as needed
+              width: '300px',
+              height: 'auto',
+              margin: 'auto',
+              zIndex: 1, // Set a lower z-index
+            }}
+          />
+
+          
+
           <h1 style={{ paddingBottom: '75px' }}>John Smith</h1>
+
           <button
-            style={{ width: '300px', height: '75px' }}
+            style={{ 
+              width: '300px', 
+              height: '75px',
+              position: 'absolute',
+              top: 350,
+              left: 100,
+             }}
             onClick={handleOpenChest}
             disabled={remainingChests === 0}
           >
@@ -226,6 +279,8 @@ function Customization() {
             show={modalShow}
             onHide={() => setModalShow(false)}
           />
+        </div>
+
         </Col>
       </Row>
     </div>
