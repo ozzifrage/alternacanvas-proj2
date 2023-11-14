@@ -48,7 +48,7 @@ function CoursePage() {
 						</Col>
 						<Col sm={10}>sm=10
 							<Container className={styles.contentContainer}>
-								{data.map((entry) => <PageCard header={entry.header} subheader={entry.date} body={entry.body} ></PageCard>)}
+								{data.map((entry) => <PageCard header={entry.header} subheader={entry.date} body={entry.body} subtype={entry.type}></PageCard>)}
 							</Container>
 						</Col>
 					</Row>
