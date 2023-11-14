@@ -7,10 +7,10 @@ import 'slick-carousel/slick/slick-theme.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+
 function Customization() {
   const [modalShow, setModalShow] = useState(false);
   const [remainingChests, setRemainingChests] = useState(5);
-  const [updateSlider, setUpdateSlider] = useState(false);
   const [lastUnlockedItem, setLastUnlockedItem] = useState(null);
   const [selectedHat, setSelectedHat] = useState(null);
   const [selectedShirt, setSelectedShirt] = useState(null);
@@ -52,6 +52,7 @@ function Customization() {
   const [lockedBackgroundItems, setLockedBackgroundItems] = useState([
     { id: 5, name: 'Forest', imageUrl: 'images/backgrounds/background_05.png' },
     { id: 6, name: 'Royal', imageUrl: 'images/backgrounds/background_06.png' },
+    { id: 7, name: 'Minecraft', imageUrl: 'images/backgrounds/background_07.png' },
   ]);
 
 
@@ -60,29 +61,47 @@ function Customization() {
     width: '500px',
   };
 
+  // Import your arrow images
+
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
         className={className}
-        style={{ ...style, display: 'block' }}
+        style={{
+          ...style,
+          display: 'block',
+          color: '#888888', // Set the color to #888888
+          fontSize: '44px', // Adjust the font size if needed
+          marginRight: '55px', // Adjust margin if needed
+          cursor: 'pointer',
+        }}
         onClick={onClick}
-      />
+      >{'>'}</div>
     );
   }
-
+  
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
         className={className}
-        style={{ ...style, display: 'block' }}
+        style={{
+          ...style,
+          display: 'block',
+          color: '#888888', // Set the color to #888888
+          fontSize: '44px', // Adjust the font size if needed
+          marginLeft: '-60px', // Adjust margin if needed
+          cursor: 'pointer',
+        }}
         onClick={onClick}
-      />
+      >{'<'}</div>
     );
   }
+  
+  
 
-  const carouselSettings = {
+  const hatCarouselSettings = {
     infinite: true,
     speed: 200,
     slidesToShow: 3,
@@ -90,10 +109,38 @@ function Customization() {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     afterChange: (currentSlide, nextSlide) => {
-      // Update selected items based on the current center item
+      // Update selected hat based on the current center item
       if (hatItems.length > 0) setSelectedHat(hatItems[currentSlide]);
-      if (shirtItems.length > 0) setSelectedShirt(shirtItems[currentSlide]);
-      if (backgroundItems.length > 0) setSelectedBackground(backgroundItems[currentSlide]);
+    },
+    centerMode: true,
+    centerPadding: '0',
+  };
+
+  const shirtCarouselSettings = {
+    infinite: true,
+    speed: 200,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    afterChange: (currentSlide, nextSlide) => {
+      // Update selected hat based on the current center item
+      if (hatItems.length > 0) setSelectedShirt(shirtItems[currentSlide]);
+    },
+    centerMode: true,
+    centerPadding: '0',
+  };
+
+  const backgroundCarouselSettings = {
+    infinite: true,
+    speed: 200,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    afterChange: (currentSlide, nextSlide) => {
+      // Update selected hat based on the current center item
+      if (hatItems.length > 0) setSelectedBackground(backgroundItems[currentSlide]);
     },
     centerMode: true,
     centerPadding: '0',
@@ -104,7 +151,7 @@ function Customization() {
     return (
       <Modal
         {...props}
-        size="lg"
+        size="md"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
@@ -119,7 +166,7 @@ function Customization() {
             <img
               src={lastUnlockedItem.imageUrl}
               alt={lastUnlockedItem.name}
-              style={{ width: '100px', height: 'auto' }}
+              style={{ width: '300px', height: 'auto' }}
             />
           )}
         </Modal.Body>
@@ -179,50 +226,109 @@ function Customization() {
   return (
     <div>
       <Row style={{ height: '100vh' }}>
-        <Col xs={12} md={8} lg={8} style={{ height: '100%', backgroundColor: '#c0c0c0' }}>
+        <Col xs={12} md={8} lg={8} style={{ height: '100%', backgroundColor: '#ffffff' }}>
           <h1>Customization Page</h1>
           <hr />
-          <h2>Locker</h2>
 
-          <h4 style={{ textAlign: 'center' }}>Hats</h4>
-          <div>
-            <Slider key={updateSlider} {...carouselSettings} style={customSliderStyle}>
-              {hatItems.map((hat) => (
-                <div key={hat.id}>
-                  <img src={hat.imageUrl} alt={hat.name} style={{ width: '100px', height: 'auto' }} />
-                  <p>{hat.name}</p>
+            {/* Hat Slider */}
+            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', marginBottom: '20px', marginTop: '80px' }}>
+              <h4 style={{ textAlign: 'left', marginRight: '10px' }}>Hats</h4>
+              <div style={{ position: 'relative', marginLeft: '182px' }}>
+                <Slider {...hatCarouselSettings} style={customSliderStyle}>
+                  {hatItems.map((hat) => (
+                    <div key={hat.id}>
+                      <img src={hat.imageUrl} alt={hat.name} style={{ width: '100px', height: 'auto' }} />
+                      <p>{hat.name}</p>
+                    </div>
+                  ))}
+                </Slider>
+                {/* Hat Slider Pointer */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    left: '40%', // Center horizontally within the relative container
+                    transform: 'translateX(-50%)',
+                    top: '-20%', // Center vertically
+                    transform: 'translateY(-50%)',
+                  }}
+                >
+                  <img
+                    src="./images/selection_arrow.png"
+                    alt="Slider Pointer"
+                    style={{ height: '30px', width: 'auto' }}
+                  />
                 </div>
-              ))}
-            </Slider>
+
+              </div>
+            </div>
+
+          {/* Shirt Slider */}
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', marginBottom: '20px', marginTop: '80px' }}>
+            <h4 style={{ textAlign: 'left', marginRight: '10px' }}>Shirts</h4>
+            <div style={{ position: 'relative', marginLeft: '168px' }}>
+              <Slider {...shirtCarouselSettings} style={customSliderStyle}>
+                {shirtItems.map((shirt) => (
+                  <div key={shirt.id}>
+                    <img src={shirt.imageUrl} alt={shirt.name} style={{ width: '100px', height: 'auto' }} />
+                    <p>{shirt.name}</p>
+                  </div>
+                ))}
+              </Slider>
+              {/* Shirt Slider Pointer */}
+              <div
+                style={{
+                  position: 'absolute',
+                  left: '40%', // Center horizontally within the relative container
+                  transform: 'translateX(-50%)',
+                  top: '-20%', // Center vertically
+                  transform: 'translateY(-50%)',
+                }}
+              >
+                <img
+                  src="./images/selection_arrow.png"
+                  alt="Slider Pointer"
+                  style={{ height: '30px', width: 'auto' }}
+                />
+              </div>
+            </div>
           </div>
 
-          <h4 style={{ textAlign: 'center' }}>Shirts</h4>
-          <div>
-            <Slider {...carouselSettings} style={customSliderStyle}>
-              {shirtItems.map((shirt) => (
-                <div key={shirt.id}>
-                  <img src={shirt.imageUrl} alt={shirt.name} style={{ width: '100px', height: 'auto' }} />
-                  <p>{shirt.name}</p>
-                </div>
-              ))}
-            </Slider>
+
+          {/* Background Slider */}
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', marginBottom: '20px', marginTop: '80px' }}>
+            <h4 style={{ textAlign: 'left' }}>Backgrounds</h4>
+            <div style={{ position: 'relative', marginLeft: '100px' }}>
+              <Slider {...backgroundCarouselSettings} style={customSliderStyle}>
+                {backgroundItems.map((background) => (
+                  <div key={background.id}>
+                    <img src={background.imageUrl} alt={background.name} style={{ width: '100px', height: 'auto' }} />
+                    <p>{background.name}</p>
+                  </div>
+                ))}
+              </Slider>
+              {/* Background Slider Pointer */}
+              <div
+                style={{
+                  position: 'absolute',
+                  left: '40%', // Center horizontally within the relative container
+                  transform: 'translateX(-50%)',
+                  top: '-20%', // Center vertically
+                  transform: 'translateY(-50%)',
+                }}
+              >
+                <img
+                  src="./images/selection_arrow.png"
+                  alt="Slider Pointer"
+                  style={{ height: '30px', width: 'auto' }}
+                />
+              </div>
+            </div>
           </div>
 
-          <h4 style={{ textAlign: 'center' }}>Backgrounds</h4>
-          <div>
-            <Slider {...carouselSettings} style={customSliderStyle}>
-              {backgroundItems.map((background) => (
-                <div key={background.id}>
-                  <img src={background.imageUrl} alt={background.name} style={{ width: '100px', height: 'auto' }} />
-                  <p>{background.name}</p>
-                </div>
-              ))}
-            </Slider>
-          </div>
 
         </Col>
 
-        <Col xs={12} md={4} lg={4} style={{ height: '100%', backgroundColor: '#808080', paddingTop: '80px', textAlign: 'center' }}>
+        <Col xs={12} md={4} lg={4} style={{ height: '100%', backgroundColor: '#444444', paddingTop: '80px', textAlign: 'center' }}>
         <div style={{ position: 'relative' }}>
 
           {/* Display the selected background */}
@@ -258,17 +364,50 @@ function Customization() {
             }}
           />
 
-          
+          {/* Display the shirt image */}
+          {selectedShirt && (
+            <img
+              id="shirt-image"
+              src={selectedShirt.imageUrl}
+              alt={selectedShirt.name}
+              style={{
+                position: 'absolute',
+                top: 208, 
+                left: 162,  
+                width: '175px',
+                height: 'auto',
+                margin: 'auto',
+                zIndex: 2, 
+              }}
+            />
+          )}
 
-          <h1 style={{ paddingBottom: '75px' }}>John Smith</h1>
+          {/* Display the shirt image */}
+          {selectedHat && (
+            <img
+              id="hat-image"
+              src={selectedHat.imageUrl}
+              alt={selectedHat.name}
+              style={{
+                position: 'absolute',
+                top: 75, 
+                left: 200,  
+                width: '100px',
+                height: 'auto',
+                margin: 'auto',
+                zIndex: 2, 
+              }}
+            />
+          )}
+
+          <h1 style={{ paddingTop: '325px', paddingBottom: '50px', color: 'white' }}>John Smith</h1>
+
 
           <button
             style={{ 
               width: '300px', 
               height: '75px',
-              position: 'absolute',
-              top: 350,
-              left: 100,
+              fontSize: '23px',
              }}
             onClick={handleOpenChest}
             disabled={remainingChests === 0}
