@@ -10,7 +10,7 @@ import Modal from 'react-bootstrap/Modal';
 
 function Customization() {
   const [modalShow, setModalShow] = useState(false);
-  const [remainingChests, setRemainingChests] = useState(5);
+  const [remainingChests, setRemainingChests] = useState(15);
   const [lastUnlockedItem, setLastUnlockedItem] = useState(null);
   const [selectedHat, setSelectedHat] = useState(null);
   const [selectedShirt, setSelectedShirt] = useState(null);
@@ -21,11 +21,17 @@ function Customization() {
     { id: 2, name: 'Santa Hat', imageUrl: 'images/hats/hat_02.png' },
     { id: 3, name: 'Green Hat', imageUrl: 'images/hats/hat_03.png' },
     { id: 4, name: 'Cowboy Hat', imageUrl: 'images/hats/hat_04.png' },
+    
+    
   ]);
 
   const [lockedHatItems, setLockedHatItems] = useState([
     { id: 5, name: 'Blue Cap', imageUrl: 'images/hats/hat_05.png' },
     { id: 6, name: 'Horned Hat', imageUrl: 'images/hats/hat_06.png' },
+    { id: 7, name: 'UC Cap', imageUrl: 'images/hats/hat_07.png' },
+    { id: 8, name: 'Pirate Hat', imageUrl: 'images/hats/hat_08.png' },
+    { id: 9, name: 'Elephant Costume', imageUrl: 'images/hats/hat_09.png' },
+    { id: 9, name: "Cat in the Hat's Hat", imageUrl: 'images/hats/hat_10.png' },
   ]);
 
   const [shirtItems, setShirtItems] = useState([
@@ -53,8 +59,11 @@ function Customization() {
     { id: 5, name: 'Forest', imageUrl: 'images/backgrounds/background_05.png' },
     { id: 6, name: 'Royal', imageUrl: 'images/backgrounds/background_06.png' },
     { id: 7, name: 'Minecraft', imageUrl: 'images/backgrounds/background_07.png' },
+    { id: 8, name: 'UC Campus', imageUrl: 'images/backgrounds/background_08.png' },
+    { id: 9, name: 'Pirate Ship', imageUrl: 'images/backgrounds/background_09.png' },
+    { id: 10, name: 'Fall Forest', imageUrl: 'images/backgrounds/background_10.png' },
+    { id: 11, name: 'Cat Cafe', imageUrl: 'images/backgrounds/background_11.png' },
   ]);
-
 
   const customSliderStyle = {
     margin: 'auto',
@@ -99,7 +108,18 @@ function Customization() {
     );
   }
   
-  
+  useEffect(() => {
+    // Set default selections when the component mounts
+    if (hatItems.length > 0) {
+      setSelectedHat(hatItems[0]);
+    }
+    if (shirtItems.length > 0) {
+      setSelectedShirt(shirtItems[0]);
+    }
+    if (backgroundItems.length > 0) {
+      setSelectedBackground(backgroundItems[0]);
+    }
+  }, []);  
 
   const hatCarouselSettings = {
     infinite: true,
@@ -372,9 +392,9 @@ function Customization() {
               alt={selectedShirt.name}
               style={{
                 position: 'absolute',
-                top: 208, 
-                left: 162,  
-                width: '175px',
+                top: 206, 
+                left: 160,  
+                width: '180px',
                 height: 'auto',
                 margin: 'auto',
                 zIndex: 2, 
@@ -390,8 +410,8 @@ function Customization() {
               alt={selectedHat.name}
               style={{
                 position: 'absolute',
-                top: 75, 
-                left: 200,  
+                top: 55, 
+                left: 197,  
                 width: '100px',
                 height: 'auto',
                 margin: 'auto',
@@ -405,9 +425,9 @@ function Customization() {
 
           <button
             style={{ 
-              width: '300px', 
-              height: '75px',
-              fontSize: '23px',
+              width: '450px', 
+              height: '100px',
+              fontSize: '30px',
              }}
             onClick={handleOpenChest}
             disabled={remainingChests === 0}
