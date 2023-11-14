@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 function CustomNavbar() {
 	return (
-		<Navbar className={styles.navbarCustom} expand="lg">
+		<Navbar className={styles.navbarCustom} expand="lg" sticky="top">
 			<Container>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
