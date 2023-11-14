@@ -39,6 +39,8 @@ function CoursePage() {
 
 		return (
 			<div className="CoursePage">
+				<h1>User Interface I</h1>
+				<hr />
 				<Container>
 					<Row className="px-4 my-5">
 						<Col sm={2}>
@@ -58,6 +60,8 @@ function CoursePage() {
 		let data = assignmentData;
 		return (
 			<div className="CoursePage">
+				<h1>User Interface I</h1>
+				<hr />
 				<Container>
 					<Row className="px-4 my-5">
 						<Col sm={2}>
@@ -77,6 +81,8 @@ function CoursePage() {
 	{
 		return (
 			<div className="CoursePage">
+				<h1>User Interface I</h1>
+				<hr />
 				<Container>
 					<Row className="px-4 my-5">
 						<Col sm={2}>
