@@ -41,10 +41,10 @@ function CoursePage() {
 			<div className="CoursePage">
 				<Container>
 					<Row className="px-4 my-5">
-						<Col sm={2}>sm=2
+						<Col sm={2}>
 							<CourseBar></CourseBar>
 						</Col>
-						<Col sm={10}>sm=10
+						<Col sm={10}>
 							<Container className={styles.contentContainer}>
 								{data.map((entry) => <PageCard header={entry.header} subheader={entry.date} body={entry.body} subtype={entry.type}></PageCard>)}
 							</Container>
@@ -60,10 +60,10 @@ function CoursePage() {
 			<div className="CoursePage">
 				<Container>
 					<Row className="px-4 my-5">
-						<Col sm={2}>sm=2
+						<Col sm={2}>
 							<CourseBar></CourseBar>
 						</Col>
-						<Col sm={10}>sm=10
+						<Col sm={10}>
 							<Container className={styles.contentContainer}>
 								{data.map((entry) => <AssignmentCard header={entry.header} subheader={entry.date} body={entry.body} subtype={entry.type}></AssignmentCard>)}
 							</Container>
@@ -79,10 +79,10 @@ function CoursePage() {
 			<div className="CoursePage">
 				<Container>
 					<Row className="px-4 my-5">
-						<Col sm={2}>sm=2
+						<Col sm={2}>
 							<CourseBar></CourseBar>
 						</Col>
-						<Col sm={10}>sm=10
+						<Col sm={10}>
 							<Container className={styles.contentContainer}>
 								<div>
 									<h2><strong>User Interface Design</strong></h2>
