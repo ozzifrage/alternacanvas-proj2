@@ -9,7 +9,7 @@ import PageCard from './pageCard';
 import announcementData from "../data/announcements.json"
 import assignmentData from "../data/assignments.json"
 import moduleData from "../data/modules-metadata.json"
-import syllabusData from "../data/syllabus.json"
+import gradesData from "../data/grades.json"
 import zoomData from "../data/zoom.json"
 import {useParams} from "react-router-dom";
 import AssignmentCard from './AssignmentCard';
@@ -30,7 +30,7 @@ function CoursePage() {
 				data = moduleData;
 				break;
 			case "grades":
-				data = syllabusData;
+				data = gradesData;
 				break;
 			case "zoom":
 				data = zoomData;
