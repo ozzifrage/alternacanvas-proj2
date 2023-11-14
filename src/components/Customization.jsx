@@ -423,9 +423,9 @@ function Customization() {
 
           <button
             style={{ 
-              width: '450px', 
+              width: '350px', 
               height: '100px',
-              fontSize: '30px',
+              fontSize: '25px',
              }}
             onClick={handleOpenChest}
             disabled={remainingChests === 0}
